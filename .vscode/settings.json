@@ -1,0 +1,8 @@
+{
+  "editor.formatOnSave": true,
+  "python.formatting.provider": "black",
+  "python.linting.enabled": true,
+  "python.linting.flake8Enabled": true,
+  "python.linting.flake8Path": "C:\\Users\\ilyae\\OneDrive - Kornit Digital\\Desktop\\ML\\MODULES\\ML-course\\module_13\\myenv\\Scripts\\flake8.exe",
+  "python.linting.lintOnSave": true
+}
