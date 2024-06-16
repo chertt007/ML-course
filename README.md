@@ -12,6 +12,8 @@ pip install -r requirements.txt
 ## Проект 1: Анализ резюме с HeadHunter
 - **Ноутбук:** `Project_1_HeadHunter/Project-1._Ноутбук-шаблон.ipynb`
 - **Описание:** Этот ноутбук включает в себя анализ данных и визуализацию резюме с HeadHunter.
+- **Ссылка на датасэт : **
+- https://1drv.ms/u/s!AiJ38QukYddAgcEy40PELIsZDgpMaA?e=i0PwFp
 - **Основные используемые библиотеки:** pandas, numpy, matplotlib, seaborn, plotly.
 
 ## Структура репозитория
