@@ -1,0 +1,30 @@
+Удалить целевой столбец
+#Составляем список факторов (исключили целевой столбец)
+features = boston_data.drop('MEDV', axis=1).columns
+===============================
+#Составляем матрицу наблюдений X и вектор ответов y
+X = boston_data[features]
+y = boston_data['MEDV']
+=====================================
+from sklearn.model_selection import train_test_split
+#Разделяем выборку на тренировочную и тестовую в соотношении 70/30
+#Устанавливаем random_state для воспроизводимости результатов 
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=40)
+===========
+#Выводим результирующие размеры таблиц
+print('Train:', X_train.shape, y_train.shape)
+print('Test:', X_test.shape, y_test.shape)
+=======================
+#Создаём объект класса LinearRegression
+lr_model = linear_model.LinearRegression()
+#Обучаем модель по МНК
+lr_model.fit(X_train, y_train)
+ =======================
+ #Делаем предсказание для тренировочной выборки
+y_train_predict = lr_model.predict(X_train)
+#Делаем предсказание для тестовой выборки
+y_test_predict = lr_model.predict(X_test)
+======================
+print("Train R^2: {:.3f}".format(metrics.r2_score(y_train, y_train_predict)))
+print("Test R^2: {:.3f}".format(metrics.r2_score(y_test, y_test_predict)))
+=======================
